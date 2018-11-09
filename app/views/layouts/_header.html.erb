@@ -1,0 +1,30 @@
+<div class="header-wrapper">
+  <div class="header-logo">
+    <p>SAMPLE</p>
+  </div>
+<div id="header-sub">
+  <div class="header-sub">
+    <p><%= link_to "home", root_path %></p>
+    <% if user_signed_in? %>
+    <p><%= link_to "ログアウト", destroy_user_session_path, method: :delete %></p>
+    <% else %>
+    <p><%= link_to "登録", new_user_registration_path %></p>
+    <p><%= link_to "ログイン", new_user_session_path %></p>
+    <% end %>
+    <p><i class="fa fa-align-justify" v-on:click="show = !show"></i></p>
+  </div>
+  <transition name="show">
+    <div class="sidemenu" v-if="show">
+      <ul>2
+        <li><a href="#">About</a></li>
+        <li><a href="#">Team</a></li>
+        <li><a href="#">Work</a></li>
+        <li><a href="#">Contact</a></li>
+      </ul>
+    </div>
+  </transition>
+ </div>
+</div>
+
+<%= javascript_pack_tag 'header_vue' %>
+<script src="https://cdn.jsdelivr.net/npm/axios@0.18.0/dist/axios.min.js"></script>

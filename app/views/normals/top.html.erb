@@ -1,0 +1,59 @@
+<div class="home-wrapper">
+  <div class="home-title">
+    <h1>Connect to person who you wanna talk</h1>
+    <div class="swiper-container">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <p><%= image_tag('homepic.jpg') %></p>
+        </div>
+        <div class="swiper-slide">
+          <p><%= image_tag('homepic2.jpg') %></p>
+        </div>
+        <div class="swiper-slide">
+          <p><%= image_tag('homepic3.jpg') %></p>
+        </div>
+        <div class="swiper-slide">
+          <p><%= image_tag('homepic4.jpg') %></p>
+        </div>
+      </div>
+
+      <!-- <div class="swiper-button-prev"></div>
+      <div class="swiper-button-next"></div> -->
+      <div class="swiper-scrollbar"></div>
+    </div>
+
+    <p id="home-foreigner">foreigner?</p>
+    <p id="home-japanese">Japanese?</p>
+  </div>
+</div>
+</div>
+<style type="text/css">
+canvas {border: 1px solid #999;}
+</style>
+<canvas id="tutorial" width="400" height="300"></canvas>
+<script type="text/javascript">
+  (function draw() {
+    let canvas = document.getElementById('tutorial');
+    if (canvas.getContext) {
+      let ctx = canvas.getContext('2d');
+      ctx.fillRect(50,50,300,200);
+      ctx.clearRect(120, 80, 200, 140);
+      ctx.strokeRect(200, 20, 180, 260);
+    }
+  })();
+</script>
+
+<%= javascript_include_tag 'swiper.js' %>
+
+<script>
+var swiper = new Swiper('.swiper-container', {
+	pagination: '.swiper-pagination',
+	paginationClickable: true,
+	parallax: true,
+	speed: 1,
+  uniqueNavElements: true,
+  autoplay: {
+    delay: 3000,
+  },
+});
+</script>

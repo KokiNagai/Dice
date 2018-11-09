@@ -1,0 +1,136 @@
+// Place all the styles related to the normals controller here.
+// They will automatically be included in application.css.
+// You can use Sass (SCSS) here: http://sass-lang.com/
+@import "bootstrap-sprockets";
+@import "bootstrap";
+
+$gray-medium-light: #a0a0a0;
+$gray-medium-dark: #4c4c4c;
+$gray-border-light: #cfcfcf;
+$gray-word: #919191;
+$green-logo-color: #9cd75b;
+$pink-hightlight: #ff6666;
+$pink-borderbottom: #ffd6d6;
+$green-highlight: #5f9ea0;
+
+html,body{
+  margin:0;
+  padding:0;
+  background-size: cover;
+}
+
+@media only screen and (min-width: 768px) {
+  // Header(pC)=========================================
+  header {
+  font-family: -apple-system, 'BlinkMacSystemFont', '.SFNSDisplay-Regular', sans-serif;
+  box-shadow: -1px 1px 1px rgba(0,0,0,0.1);
+}
+
+.header-wrapper {
+  display: flex;
+  justify-content: space-between;
+  margin: 25px;
+  height: 30px;
+  z-index: 100;
+}
+.header-sub {
+  display: flex;
+  justify-content: space-around;
+  p {
+    margin-right: 20px;
+    font-weight: 600;
+    font-size: 1.6rem;
+    cursor: pointer;
+  }
+}
+.sidemenu{
+  background: $gray-medium-dark;
+  height:100%;
+  position: fixed;
+  width:250px;
+  top:0;
+  left:0;
+}
+.sidemenu ul{
+  position: relative;
+  list-style:none;
+  top:20px;
+}
+.sidemenu ul li{
+  margin:10px 0;
+}
+.sidemenu ul li a{
+  color:#fff;
+  text-decoration: none;
+}
+.sidemenu ul li a:hover{
+  color:gray;
+}
+/* Vueの方で自動的に付与されるクラス */
+.show-enter-active, .show-leave-active {
+  transition: all .5s;
+}
+.show-enter, .show-leave-to {
+  width: 0;
+}
+
+// home(pc)=========================================
+
+  .home-wrapper {
+    .home-title {
+      position: relative;
+      width: 100%;
+    }
+    img {
+      width: 100%;
+      height: 300px;
+      object-fit: cover;
+    }
+    h1 {
+      position: absolute;
+      color: #fff;
+      font-weight: 600;
+      font-size: 3rem;
+      top: 10%;
+      left: 30%;
+      z-index: 100;
+    }
+    #home-foreigner {
+      position: absolute;
+      color: #fff;
+      background-color: #4169e1;
+      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      width: 120px;
+      height: 40px;
+      padding: 5px 10px 10px 10px;
+      font-size: 2rem;
+      font-weight: 600;
+      top: 40%;
+      left: 30%;
+      vertical-align: middle;
+      display: table-cell;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 5px 5px #4169e1;
+    }
+
+    #home-japanese {
+      position: absolute;
+      color: #fff;
+      background-color: #f08080;
+      border-radius: 5px 5px 5px 5px / 5px 5px 5px 5px;
+      width: 120px;
+      height: 40px;
+      padding: 5px 10px 10px 10px;
+      font-size: 2rem;
+      font-weight: 600;
+      top: 40%;
+      left: 60%;
+      vertical-align: middle;
+      display: table-cell;
+      cursor: pointer;
+      z-index: 100;
+      box-shadow: 0 5px 5px #f08080;
+    }
+  }
+}

@@ -1,0 +1,23 @@
+<h1 id="sampleTitle"></h1>
+<h2></h2>
+<input type="text" name="" value="" id="sampleButton2">
+<input type="submit" value="送信" id="sampleButton" />
+<button type="button" name="button" id="sampleButton2">クリック</button>
+
+<div id="timer">
+  <h1>Timer</h1>
+  <p>
+    <span id="min">0</span>分
+    <span id="sec">0</span>秒
+  </p>
+  <p>
+    <input type="button" id="start" value="start">
+    <input type="button" id="stop" value="stop" disabled>
+    <input type="button" id="reset" value="reset">
+  </p>
+  <p>
+    <textarea rows="8" cols="80" id="text_area" onKeyUp="countLength(value, 'textlength')"></textarea>
+    <p id="textlength">０文字</p>
+  </p>
+</div>
+<%= javascript_include_tag 'sample1.js' %>
